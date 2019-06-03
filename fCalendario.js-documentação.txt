@@ -1,0 +1,61 @@
+=============================
+|   fCalendario.js v1       |
+|      By Gustavo M. Paes   |
+=============================
+
+Descrição: fCalendario.js é um calendario mensal onde você pode registrar eventos, que precisa do f.js para funcionar.
+
+Comandos:
+    fCalendario.meses - é uma array com o nome de todos meses do ano.
+    fCalendario.semanas - é uma array com o nome de todas semanas do mês.
+    fCalendario.max_dias - é uma array com o maximo de dias do mês.
+    fCalendario.eventos - é uma array com todos eventos registrado no calendario.
+    
+    fCalendario.carregar(componente, mes, ano) - é a função para iniciar o calendario.
+        L Parametros: 
+            L componente - elemento:
+                colocar o elemento que ele irá usar para instanciar o calendario.
+            L mes - int (opcional):
+                o mês que o calendario irá exibir. (por padrão está no mês atual)
+            L ano - int (opcional):
+                o ano que o calendario irá exibir. (por padrão está no ano atual)
+        L Exemplo:
+            fCalendario.carregar(f("#div"),5,2019) - Ele ira iniciar o calendario na div com id div no mês de maio no ano de 2019.
+    
+    fCalendario.evento(nome, tipo, cor, url, data) - é um objeto de evento
+        L Parametros:
+            L nome - string
+                o nome do evento
+            L tipo - int
+                o tipo do evento
+            L cor - string  
+                a cor que ele irá aparecer no calendario
+            L url - string
+                a url que ele irá redirecionar ao clicar no evento
+            L data - string
+                data do evento.
+        L Exemplo:
+            var evento = new fCalendario.evento('Aniversario', 1, 'gold', 'https://google.com', '21/05/2003');
+    
+    fCalendario.adicionar_evento(evento) - comando para adicionar um evento no calendario.
+        L Parametros:
+            L evento - objeto fCalendario.evento
+                evento que irá ocorrer
+        L Exemplo:
+            fCalendario.adicionar_evento(evento); irá adicionar o evento do fCalendario.evento() no calendario
+
+    fCalendario.remover_evento(id) - comando para remover um evento no calendario.
+        L Parametros:
+            L id - int
+                id do evento que irá ser removido
+        L Exemplo:
+            fCalendario.remover_evento(0); irá remover o evento do de id 0 no calendario
+
+    fCalendario.proximo(pagina) - comando para mudar o mês do calendario
+        L Parametros:
+            L pagina - int
+                pagina == -1 - vai voltar 1 mês
+                pagina == 1 - vai avançar 1 mês
+        L Exemplo:
+            fCalendario.proximo(1) - Irá para o proximo mês do calendario.
+            fCalendario.proximo(-1) - Irá para o mês anterior do calendario.

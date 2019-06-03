@@ -1,0 +1,133 @@
+.fCalendario{
+    transition: .5s;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0px 0px 10px #999;
+    width: 100%;
+    background-color: #f2f2f2;
+    user-select: none;
+}
+
+.fCalendario .mes{
+    background-color: rgba(52,58,64,1);
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.fCalendario .semanas{
+    background-color: rgba(52,58,64,1);
+    color: #ffffff;
+}
+
+.fCalendario .semanas th{
+    padding: 5px 20px;
+    width: calc(100% / 7);
+}
+
+.fCalendario .dia_td{
+    background-color: white;
+    vertical-align: text-top;
+    height: 120px;
+}
+
+.fCalendario .dia_disabled{
+    background-color: #ececec;
+    vertical-align: text-top;
+    height: 120px;
+}
+
+.fCalendario .dia_td .dia{
+    opacity: 0.9;
+    padding: 5px 5px;
+}
+
+.fCalendario .ano{
+    float: right;
+}
+
+.fCalendario .evento_a{
+    color: white;
+    padding: 2px 8px;
+    text-decoration: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+@media only screen and (min-width: 1250px){
+    .fCalendario .evento{
+        display: inline-block;
+        white-space: nowrap;
+        position: absolute;
+        max-width: 150px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        cursor: none;
+    }
+}
+@media only screen and (min-width: 970px) and (max-width: 1249px){
+    .fCalendario .evento{
+        display: inline-block;
+        white-space: nowrap;
+        position: absolute;
+        max-width: 120px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        cursor: none;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 970px){
+    .fCalendario .evento{
+        display: inline-block;
+        white-space: nowrap;
+        position: absolute;
+        max-width: 80px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        cursor: none;
+    }
+}
+@media only screen and (max-width: 499px){
+    .fCalendario .evento{
+        display: inline-block;
+        white-space: nowrap;
+        position: absolute;
+        max-width: 50px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        cursor: none;
+    }
+    .fCalendario{
+        transition: .5s;
+        padding: 6px 10px;
+        border-radius: 5px;
+        border: 1px solid #dee2e6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0px 0px 10px #999;
+        width: 100%;
+        background-color: #f2f2f2;
+        user-select: none;
+    }
+    
+    .fCalendario .semanas{
+        background-color: #c6c6c6;
+        display:none;
+    }
+    .fCalendario .dia_td{
+        background-color: white;
+        vertical-align: text-top;
+        height: 60px;
+    }
+    .fCalendario .dia_disabled{
+        background-color: #ccc9c9;
+        vertical-align: text-top;
+        height: 60px;
+    }
+    
+}
